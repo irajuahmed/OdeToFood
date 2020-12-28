@@ -3,4 +3,27 @@
 @{
 }
 <h1>Restaurants List</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Cusine Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rs in Model.Restaurants)
+        {
+            <tr>
+                <td>@rs.Id</td>
+                <td>@rs.Name</td>
+                <td>@rs.Location</td>
+                <td>@rs.Cusine</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 @Model.Message
