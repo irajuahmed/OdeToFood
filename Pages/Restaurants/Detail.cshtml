@@ -1,0 +1,17 @@
+﻿@page
+@model OdeToFood.Pages.Restaurants.DetailModel
+@{
+    ViewData["title"] = "Detail";
+}
+<h2>@Model.Restaurant.Name</h2>
+<div>
+    Id: @Model.Restaurant.Id
+</div>
+<div>
+    Name: @Model.Restaurant.Name
+</div>
+<div>
+    Location: @Model.Restaurant.Location
+</div>
+<div>Cusine: @Model.Restaurant.Cusine</div>
+<a asp-page="./List" class="btn btn-default">All Restaurant</a>
