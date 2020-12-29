@@ -20,13 +20,14 @@
         </div>
     </div>
 </form>
-<table class="table table-bordered">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Location</th>
             <th>Cusine Type</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -37,6 +38,13 @@
                 <td>@rs.Name</td>
                 <td>@rs.Location</td>
                 <td>@rs.Cusine</td>
+                <td>
+                    <a class="btn btn-lg"
+                       asp-page="./Detail"
+                       asp-route-restaurantId="@rs.Id">
+                        <i class="glyphicon glyphicon-zoom-in"></i>
+                    </a>
+                </td>
             </tr>
         }
     </tbody>
